@@ -1,22 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
 
 * {
-    /* width not affected by padding or border */
-    box-sizing: border-box;
+  /* width not affected by padding or border */
+  box-sizing: border-box;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    flex-direction: column;
-    /* Centered horizontally */
-    align-items: center; 
-    /* Centered vertically on 100% viewport */
-    justify-content: center;
-    /* 100% viewport height  */
-    height: 100vh;
-    /* don't want scrollbars  */
-    overflow: hidden;
-    /* no margins  */
-    margin: 0;
+  font-family: "Muli", sans-serif;
+  background-color: #e1e1e1;
+  display: flex;
+  /* Centered horizontally */
+  align-items: center;
+  /* Centered vertically on 100% viewport */
+  justify-content: center;
+  /* center text */
+  text-align: center;
+  /* 100% viewport height  */
+  height: 100vh;
+  /* don't want scrollbars  */
+  overflow: hidden;
+  /* no margins  */
+  margin: 0;
+}
+
+.key {
+  /* solid border all around */
+  border: 1px solid #999;
+  background-color: #eee;
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  /* puts divs side by side */
+  display: inline-flex;
+  /* Centered horizontally */
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  /* 20px all around */
+  padding: 20px;
+  /* lines of text stacked vertically  */
+  flex-direction: column;
+  /* 10px all around */
+  margin: 10px;
+  /* 150px minimum width */
+  min-width: 150px;
+  /* so children can be absolute */
+  position: relative;
+}
+
+/* small elements in div with class key */
+.key small {
+  /* can now specify exactly where we want */
+  position: absolute;
+  /* -24px from top puts it above dimensions of box */
+  top: -24px;
+  /* flush with left edge */
+  left: 0;
+  /* center text */
+  text-align: center;
+  /* take up full width of container */
+  width: 100%;
+  color: #555;
+  font-size: 14px;
 }
